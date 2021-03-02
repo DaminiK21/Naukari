@@ -15,6 +15,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.w3c.dom.Text;
@@ -28,8 +29,8 @@ public class NaukriUpdate extends ConfigReader {
 
 	@BeforeMethod
 	public void doSetup() throws IOException {
-		System.setProperty("webdriver.gecko.driver", "D:\\testing doc\\eclipse\\Firefox\\geckodriver-v0.26.0-win64\\geckodriver.exe");
-		driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", "G:\\eclipse-java-2019-09-R-win32-x86_64\\eclipse\\Chrome 88\\chromedriver.exe");
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
 		String url = new ConfigReader().getProperty("url");
@@ -85,5 +86,11 @@ public class NaukriUpdate extends ConfigReader {
 
 		driver.findElement(By.xpath("//form[@name='resumeHeadlineForm']//button[text()='Save']")).click();
 		System.out.println("execution completed.");
+	}
+	
+	@AfterTest
+	public void closeAllBrowsers()
+	{
+		driver.quit();
 	}
 }
