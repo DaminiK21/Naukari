@@ -79,9 +79,14 @@ public class NaukriUpdate extends ConfigReader {
 		WebElement txtBox = driver.findElement(By.id("resumeHeadlineTxt"));
 		if (txtBox.getText().endsWith(".")) {
 			txtBox.sendKeys(Keys.BACK_SPACE);
-			txtBox.sendKeys(".");
+			
 			
 
+		}
+		
+		else {
+			txtBox.sendKeys(".");
+			
 		}
 
 		driver.findElement(By.xpath("//form[@name='resumeHeadlineForm']//button[text()='Save']")).click();
