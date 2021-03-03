@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26475" started-at="2021-03-02T07:41:48Z" finished-at="2021-03-02T07:42:15Z">
+  <suite name="Default suite" duration-ms="41808" started-at="2021-03-03T05:22:11Z" finished-at="2021-03-03T05:22:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26475" started-at="2021-03-02T07:41:48Z" finished-at="2021-03-02T07:42:15Z">
+    <test name="Default test" duration-ms="41808" started-at="2021-03-03T05:22:11Z" finished-at="2021-03-03T05:22:53Z">
       <class name="Naukri.NaukriUpdate">
-        <test-method status="PASS" signature="doSetup()[pri:0, instance:Naukri.NaukriUpdate@7c469c48]" name="doSetup" is-config="true" duration-ms="7560" started-at="2021-03-02T07:41:48Z" finished-at="2021-03-02T07:41:56Z">
+        <test-method status="PASS" signature="doSetup()[pri:0, instance:Naukri.NaukriUpdate@7c469c48]" name="doSetup" is-config="true" duration-ms="7848" started-at="2021-03-03T05:22:11Z" finished-at="2021-03-03T05:22:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doSetup -->
-        <test-method status="PASS" signature="test()[pri:0, instance:Naukri.NaukriUpdate@7c469c48]" name="test" duration-ms="17662" started-at="2021-03-02T07:41:56Z" finished-at="2021-03-02T07:42:14Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:Naukri.NaukriUpdate@7c469c48]" name="test" duration-ms="32816" started-at="2021-03-03T05:22:19Z" finished-at="2021-03-03T05:22:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="closeAllBrowsers()[pri:0, instance:Naukri.NaukriUpdate@7c469c48]" name="closeAllBrowsers" is-config="true" duration-ms="1209" started-at="2021-03-02T07:42:14Z" finished-at="2021-03-02T07:42:15Z">
+        <test-method status="PASS" signature="closeAllBrowsers()[pri:0, instance:Naukri.NaukriUpdate@7c469c48]" name="closeAllBrowsers" is-config="true" duration-ms="1092" started-at="2021-03-03T05:22:52Z" finished-at="2021-03-03T05:22:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeAllBrowsers -->

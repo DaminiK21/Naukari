@@ -69,7 +69,40 @@ public class NaukriUpdate extends ConfigReader {
 		driver.findElement(By.xpath("//a[text()='Edit Profile']")).click();
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
+		
+		
 		js.executeScript("arguments[0].scrollIntoView();", driver.findElement(By.xpath("//*[text()='Attach Resume']")));
+		Thread.sleep(5000);
+		
+		WebElement attachment= driver.findElement(By.xpath("//input[@id='attachCV']"));
+		//String title=driver.findElement(By.xpath("//b[@class='truncate exten']")).getText().replace(".", "@").split("@")[1].trim();
+		WebElement title=driver.findElement(By.xpath("//div[@class='cvPreview']//b"));
+		System.out.println(title.getText());
+		//System.out.println(title.contains("docx"));
+		if(title.getText().contains("docx"))
+		{
+			
+			//Runtime.getRuntime().exec("G:\\eclipse-java-2019-09-R-win32-x86_64\\NaukriProfileUpdate\\Naukari\\Resume\\pdfFile.exe");
+			//attachment.sendKeys(System.getProperty("user.dir")+"\\src\\test\\DaminiKadam_QA_3years.pdf");
+			attachment.sendKeys("G:\\eclipse-java-2019-09-R-win32-x86_64\\NaukriProfileUpdate\\Naukari\\Resume\\DaminiKadam_QA_3years.pdf");
+			System.out.println("Pdf uploaded");
+			//System.out.println(driver.findElement(By.linkText("Resume has been successfully uploaded.")).getText());
+			
+		}
+		
+		else {
+		
+			//Runtime.getRuntime().exec("G:\\eclipse-java-2019-09-R-win32-x86_64\\NaukriProfileUpdate\\Naukari\\Resume\\pdfFile.exe");		
+			//attachment.sendKeys(System.getProperty("user.dir")+"\\Downloads\\DaminiKadam_QA_3years.pdf");
+			attachment.sendKeys("G:\\eclipse-java-2019-09-R-win32-x86_64\\NaukriProfileUpdate\\Naukari\\Resume\\DaminiKadam_QA_3years.docx");
+			System.out.println("docx uploaded");
+			//System.out.println(driver.findElement(By.linkText("Resume has been successfully uploaded.")).getText());
+		}
+		
+		js.executeScript("arguments[0].scrollIntoView();", driver.findElement(By.xpath("//*[text()='Attach Resume']")));
+		Thread.sleep(5000);
+		
+		
 
 		WebElement editResumeHeadline = driver.findElement(
 				By.xpath("//div[@class='cardPad']//span[text()='Resume Headline']/following-sibling::span"));
@@ -91,7 +124,13 @@ public class NaukriUpdate extends ConfigReader {
 
 		driver.findElement(By.xpath("//form[@name='resumeHeadlineForm']//button[text()='Save']")).click();
 		System.out.println("execution completed.");
+		
+		Thread.sleep(5000);
+	
+		
 	}
+	
+	
 	
 	@AfterTest
 	public void closeAllBrowsers()

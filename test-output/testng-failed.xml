@@ -6,6 +6,7 @@
       <class name="Naukri.NaukriUpdate">
         <methods>
           <include name="doSetup"/>
+          <include name="closeAllBrowsers"/>
           <include name="test"/>
         </methods>
       </class> <!-- Naukri.NaukriUpdate -->
